@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+section{
+    position:absolute;
+    background-image:url("walking.png");
+    width:256px;
+    height:314px;
+    left:0;
+    animation:walk 0.7s steps(8) infinite, move 5s linear infinite;
+}
+
+
+@keyframes walk{
+    0%{
+
+    }
+    100%{
+        background-position:-2048px 0;
+    }
+}
+
+@keyframes move{
+    49%{
+        left:calc(100% - 256px);
+        
+    }
+    50%{
+        
+        transform:scaleX(1);
+       
+    }
+    51%{
+        left:calc(100% - 256px);
+        transform:scaleX(-1);
+        
+    }
+    100%{
+        left:0;
+        transform:scaleX(-1);
+        
+    }
+    
+
+}
